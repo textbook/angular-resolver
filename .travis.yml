@@ -10,8 +10,8 @@ script:
   - ng lint --type-check
 
 before_deploy:
-  - ng build --prod --aot false --output-path dist-jit
-  - ng build --prod --aot true --output-path dist-aot
+  - npm run package:aot
+  - npm run package:jit
 
 deploy:
     provider: cloudfoundry
