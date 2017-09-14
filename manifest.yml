@@ -1,0 +1,9 @@
+---
+buildpack: staticfile_buildpack
+disk_quota: 64M
+memory: 64M
+applications:
+- name: angular-resolver-jit
+  path: dist-jit
+- name: angular-resolver-aot
+  path: dist-aot

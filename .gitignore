@@ -2,6 +2,8 @@
 
 # compiled output
 /dist
+/dist-jit
+/dist-aot
 /tmp
 /out-tsc
 
