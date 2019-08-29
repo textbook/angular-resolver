@@ -1,13 +1,12 @@
 import { Resolve } from '@angular/router';
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/delay';
-import 'rxjs/add/observable/of';
+import { Observable, of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 export class MessageResolver implements Resolve<string> {
 
   resolve(): Observable<string> {
-    return Observable.of('hello world').delay(2000);
+    return of('hello world').pipe(delay(2000));
   }
 
 }
